@@ -1,4 +1,5 @@
-package McDonalds;
+package modelo.listas;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -9,54 +10,57 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import modelo.mcobject.McDonalds;
+import modelo.mcobject.McExpress;
 
-public class ListaMcCafe {
-	
+public class ListaMcExpress {
+
 private ArrayList lista;
 	
 	Scanner teclado = new Scanner(System.in);
-	public ListaMcCafe()
+	public ListaMcExpress()
 	{
-		this.lista = new ArrayList<McCafe>(); 
+		this.lista = new ArrayList<McExpress>(); 
 	}
-	public void crearMcCafe(ListaMcDonalds listaMcDonalds)
+	
+	public void crearMcExpress(ListaMcDonalds listaMcDonalds)
 	{
-		System.out.println("CREACIÓN DE McCafé");
+		System.out.println("CREACIÓN DE McExpress");
 		System.out.println();
 		int cod=0;
 		//valido el codigo de la tienda buscandolo en con el método buscarTienda de la clase listaMcDonalds
 		do{
-			System.out.println("Introduce el código de la tienda en la que vas a añadir el McCafe");
+			System.out.println("Introduce el código de la tienda en la que vas a añadir el McExpress");
 			cod = teclado.nextInt();
 			if(listaMcDonalds.buscarTienda(cod).getCodigo() != cod)
 				System.out.println("No has metido una tienda válida");
 		}while(listaMcDonalds.buscarTienda(cod).getCodigo() != cod);
 		
-		System.out.println();
-		System.out.println("Introduce la hora de apertura del McCafé");
+		System.out.println("Introduce la hora de apertura del McExpress");
 		double apertura = teclado.nextDouble();
-		System.out.println("Introduce la hora de cierre del McCafé");
+		System.out.println("Introduce la hora de cierre del McExpress");
 		double cierre = teclado.nextDouble();
 		
-		McCafe cafe = new McCafe(apertura, cierre);
+		McExpress express = new McExpress(apertura, cierre);
 		//busco la tienda correspondiente a ese codigo
 		McDonalds miTienda=listaMcDonalds.buscarTienda(cod);
-		//valido si la tienda no tiene ya McCafe
-		if(miTienda.getMiMcCafe() == null)
+		//valido si la tienda no tiene ya McExpress
+		if(miTienda.getMiMcExpress() == null)
 		{
 			//añado el nuevo McExpress a su tienda
-			miTienda.setMiMcCafe(cafe);
+			miTienda.setMiMcExpress(express);
 			//cambiar el codigo de la tienda, añadiendo el McExpress
-			miTienda.cambiarCod(cafe.getCodMcCafe());	
+			miTienda.cambiarCod(express.getCodMcExpress());		
 		}
 		else
 		{
 			System.out.println("Los siento pero esta tienda ya tiene McExpress");
 		}
 		
-		this.lista.add(cafe);
 		
+		this.lista.add(express);
 	}
+	
 	public void guardar(String name) 
 	{
 		try{
@@ -91,10 +95,10 @@ private ArrayList lista;
 			//
 			ObjectInputStream flujoEntrada=new ObjectInputStream(fichero);
 			//meto en una variable entero con un cast un objeto de tipo objeto
-			McCafe e=(McCafe)flujoEntrada.readObject();
+			McExpress e=(McExpress)flujoEntrada.readObject();
 			while(e!=null){
 				this.lista.add(e);
-				e=(McCafe)flujoEntrada.readObject();
+				e=(McExpress)flujoEntrada.readObject();
 			}
 			flujoEntrada.close();
 			

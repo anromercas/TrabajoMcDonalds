@@ -1,4 +1,4 @@
-package McDonalds;
+package modelo.listas;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,6 +9,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import modelo.mcobject.McAuto;
+import modelo.mcobject.McDonalds;
 
 public class ListaMcAuto {
 

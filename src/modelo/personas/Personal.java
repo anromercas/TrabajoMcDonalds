@@ -1,6 +1,8 @@
-package McDonalds;
+package modelo.personas;
 import java.io.Serializable;
 import java.util.Scanner;
+
+import modelo.mcobject.McDonalds;
 
 
 public abstract class Personal implements java.io.Serializable{

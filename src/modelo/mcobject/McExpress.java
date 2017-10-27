@@ -1,30 +1,30 @@
-package McDonalds;
+package modelo.mcobject;
 
 import java.io.Serializable;
 
-public class McCafe implements Serializable{
+public class McExpress implements Serializable{
 	
-	private char codMcCafe;
+	private char codMcExpress;
 	private double horaApertura;
 	private double horaCierre;
 	protected static int cont=0;
 	
-	public McCafe(double apertura, double cierre)
+	public McExpress(double apertura, double cierre)
 	{
-		this.codMcCafe='C';
+		this.codMcExpress='E';
 		this.horaApertura=apertura;
 		this.horaCierre=cierre;
 		cont++;
 	}
 
-	public char getCodMcCafe() 
+	public char getCodMcExpress() 
 	{
-		return codMcCafe;
+		return codMcExpress;
 	}
 
-	public void setCodMcCafe(char codMcCafe) 
+	public void setCodMcExpress(char codMcExpress) 
 	{
-		this.codMcCafe = codMcCafe;
+		this.codMcExpress = codMcExpress;
 	}
 
 	public double getHoraApertura() 
@@ -42,11 +42,10 @@ public class McCafe implements Serializable{
 		return horaCierre;
 	}
 
-	public void setHoraCierre(double horaCierre)
+	public void setHoraCierre(double horaCierre) 
 	{
 		this.horaCierre = horaCierre;
 	}
-	
 	public String toString()
 	{
 		return "Hora apertura: " + this.horaApertura + "\nHora Cierre: " + this.horaCierre+ "\n";

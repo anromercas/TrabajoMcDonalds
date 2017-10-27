@@ -1,4 +1,4 @@
-package McDonalds;
+package modelo.personas;
 
 import java.io.Serializable;
 

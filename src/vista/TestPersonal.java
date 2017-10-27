@@ -1,4 +1,4 @@
-package McDonalds;
+package vista;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -7,6 +7,15 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import modelo.listas.ListaMcAuto;
+import modelo.listas.ListaMcCafe;
+import modelo.listas.ListaMcDonalds;
+import modelo.listas.ListaMcExpress;
+import modelo.listas.ListaPersonal;
+import modelo.personas.Encargado;
+import modelo.personas.Personal;
+import modelo.personas.Trabajador;
 
 
 

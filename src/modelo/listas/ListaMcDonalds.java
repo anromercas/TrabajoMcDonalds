@@ -1,4 +1,4 @@
-package McDonalds;
+package modelo.listas;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,6 +11,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
+
+import modelo.comparadores.ComparatorTienda;
+import modelo.mcobject.McDonalds;
 
 public class ListaMcDonalds {
 	private ArrayList<McDonalds> lista;

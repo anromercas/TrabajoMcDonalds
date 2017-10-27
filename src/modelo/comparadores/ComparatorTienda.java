@@ -1,6 +1,8 @@
-package McDonalds;
+package modelo.comparadores;
 
 import java.util.Comparator;
+
+import modelo.mcobject.McDonalds;
 
 public class ComparatorTienda implements Comparator<McDonalds>{
 

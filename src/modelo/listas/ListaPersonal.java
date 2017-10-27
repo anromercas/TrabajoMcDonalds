@@ -1,4 +1,4 @@
-package McDonalds;
+package modelo.listas;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -10,6 +10,11 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
+
+import modelo.mcobject.McDonalds;
+import modelo.personas.Encargado;
+import modelo.personas.Personal;
+import modelo.personas.Trabajador;
 
 public class ListaPersonal{
 	
