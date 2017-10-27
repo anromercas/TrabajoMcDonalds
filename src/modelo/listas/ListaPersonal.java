@@ -63,6 +63,9 @@ public class ListaPersonal{
 		System.out.println("Introduce el apellido");
 		String apellido=teclado.next();
 		String cargo;
+		System.out.println("Introduce el nombre");
+		String sal = teclado.next();
+		double salario = Double.parseDouble(sal);
 		do{
 			System.out.println("Introduce el cargo (Encargado o Trabajador)");
 			cargo=teclado.next();
@@ -75,7 +78,7 @@ public class ListaPersonal{
 		if(cargo.compareTo("Encargado") == 0 || cargo.compareTo("encargado") == 0)
 		{
 			double horasMes = addHorasMes();
-			Encargado persona = new Encargado(dni, nombre, apellido, "Encargado", horasMes);
+			Encargado persona = new Encargado(dni, nombre, apellido, "Encargado", horasMes, salario);
 			persona.setMiTienda(nodo);
 			//añado la persona a la lista de esta misma clase
 			this.lista.add(persona);
@@ -87,7 +90,7 @@ public class ListaPersonal{
 			//igualo el array al método addHorasSemana() que me devuelve un array con las horas de las semanas
 			horasSem=addHorasSemana();
 			//creo el objeto trabajador 
-			Trabajador persona = new Trabajador(dni,nombre,apellido,"Trabajador");			
+			Trabajador persona = new Trabajador(dni,nombre,apellido,"Trabajador", salario);			
 			//cambio mediante el método setHorasSemana() de la clase Trabajador las horas de la semana
 			persona.setHorasSemana(horasSem);
 			persona.setMiTienda(nodo);

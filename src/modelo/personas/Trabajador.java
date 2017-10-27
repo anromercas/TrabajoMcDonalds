@@ -11,9 +11,9 @@ public class Trabajador extends Personal implements java.io.Serializable{
 	{
 		
 	}
-	public Trabajador(String dni, String nombre, String apellido, String cargo) 
+	public Trabajador(String dni, String nombre, String apellido, String cargo, double salario) 
 	{
-		super(dni, nombre, apellido, cargo);
+		super(dni, nombre, apellido, cargo, salario);
 	}
 
 	

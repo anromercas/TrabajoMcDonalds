@@ -13,9 +13,9 @@ public class Encargado extends Personal implements java.io.Serializable{
 		
 	}
 	
-	public Encargado(String dni, String nombre, String apellido, String cargo, double horasMes) 
+	public Encargado(String dni, String nombre, String apellido, String cargo, double horasMes, double salario) 
 	{
-		super(dni, nombre, apellido, cargo);
+		super(dni, nombre, apellido, cargo, salario);
 		this.plusEncargado=50;
 		this.horasMes=horasMes;
 	}

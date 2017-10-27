@@ -7,12 +7,13 @@ import modelo.mcobject.McDonalds;
 
 public abstract class Personal implements java.io.Serializable{
 
-	protected double salarioHora=5.31;
+	protected double salarioHora;
 	private String nombre;
 	private String apellido;
 	private String dni;
 	private String cargo;
 	private McDonalds miTienda;
+	private String [] turnoPreferente = {"Mañana", "Tarde", "Mañana-tarde"};
 	
 	public abstract double calculaSalario();
 	
@@ -23,7 +24,7 @@ public abstract class Personal implements java.io.Serializable{
 	{
 		
 	}
-	public Personal(String dni, String nombre, String apellido, String cargo)
+	public Personal(String dni, String nombre, String apellido, String cargo, double salario)
 	{
 		this.dni=dni;
 		this.nombre=nombre;
